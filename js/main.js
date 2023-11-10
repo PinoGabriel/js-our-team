@@ -57,15 +57,15 @@ function key(elemento) {
     for (let i = 0; i < elemento.length; i++) {
         let divGen = document.createElement("div")
         let div = document.createElement("div")
+        let divWork = document.createElement("div")
         let immagine = document.createElement("img")
-        divGen.append(div, immagine)
+        divGen.append(div, divWork, immagine)
         msg.append(divGen)
         divGen.classList.add("card")
 
 
-        div.innerHTML += elemento[i].userName
-        div.innerHTML += elemento[i].userSurname
-        div.innerHTML += elemento[i].userWork
+        div.innerHTML += elemento[i].userName + " " + elemento[i].userSurname;
+        divWork.innerHTML += elemento[i].userWork
         immagine.src = elemento[i].imgSource
 
         
