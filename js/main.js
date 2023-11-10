@@ -13,37 +13,37 @@ const list = [
         userName : "Wayne",
         userSurname : "Barnett",
         userWork : "Founder & CEO",
-        img : "./img/wayne-barnett-founder-ceo.jpg"
+        imgSource : "./img/wayne-barnett-founder-ceo.jpg"
     },
     {
         userName : "Angela",
         userSurname : "Caroll",
         userWork : "Chief Editor",
-        img : "./img/wayne-barnett-founder-ceo.jpg"
+        imgSource : "./img/angela-caroll-chief-editor.jpg"
     },
     {
         userName : "Walter",
         userSurname : "Gordon",
         userWork : "Office Manager",
-        img : "./img/wayne-barnett-founder-ceo.jpg"
+        imgSource : "./img/walter-gordon-office-manager.jpg"
     },
     {
         userName : "Angela",
         userSurname : "Lopez",
         userWork : "Social Media Manager",
-        img : "./img/wayne-barnett-founder-ceo.jpg"
+        imgSource : "./img/angela-lopez-social-media-manager.jpg"
     },
     {
         userName : "Scott",
         userSurname : "Estrada",
         userWork : "Developer",
-        img : "./img/wayne-barnett-founder-ceo.jpg"
+        imgSource : "./img/scott-estrada-developer.jpg"
     },
     {
         userName : "Barbara",
         userSurname : "Ramos",
         userWork : "Graphic Designer",
-        img : "./img/wayne-barnett-founder-ceo.jpg"
+        imgSource : "./img/barbara-ramos-graphic-designer.jpg"
     }
 ];
 
@@ -52,11 +52,22 @@ key(list);
 // STAMPRAE SU CONSOLE PER OGNI MEMBRO LE INFORMAIZONI
 function key(elemento) {
     const msg = document.getElementById("msg")
+    
+
     for (let i = 0; i < elemento.length; i++) {
-        
-        for (let chiave in elemento[i]) {
-            msg.innerHTML += (chiave, elemento[i][chiave]);
-        }
+        let divGen = document.createElement("div")
+        let div = document.createElement("div")
+        let immagine = document.createElement("img")
+        divGen.append(div, immagine)
+        msg.append(divGen)
+        divGen.classList.add("card")
+
+
+        div.innerHTML += elemento[i].userName
+        div.innerHTML += elemento[i].userSurname
+        div.innerHTML += elemento[i].userWork
+        immagine.src = elemento[i].imgSource
+
         
     }
 }
