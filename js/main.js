@@ -51,11 +51,11 @@ key(list);
 
 // STAMPRAE SU CONSOLE PER OGNI MEMBRO LE INFORMAIZONI
 function key(elemento) {
-    
+    const msg = document.getElementById("msg")
     for (let i = 0; i < elemento.length; i++) {
         
         for (let chiave in elemento[i]) {
-            console.log(chiave, elemento[i][chiave]);
+            msg.innerHTML += (chiave, elemento[i][chiave]);
         }
         
     }
@@ -65,4 +65,3 @@ function key(elemento) {
 
 // STAMPARE LE INFO NEL DOM 
 
-const msg = document.getElementById("msg")
