@@ -59,9 +59,12 @@ function key(elemento) {
         let div = document.createElement("div")
         let divWork = document.createElement("div")
         let immagine = document.createElement("img")
-        divGen.append(div, divWork, immagine)
+        divGen.append(immagine, div, divWork)
         msg.append(divGen)
         divGen.classList.add("card")
+        immagine.classList.add("imgWidth")
+        div.classList.add("nameSurname")
+        divWork.classList.add("job")
 
 
         div.innerHTML += elemento[i].userName + " " + elemento[i].userSurname;

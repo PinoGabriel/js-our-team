@@ -1,10 +1,46 @@
+body {
+    background-color: #F5F5F1;
+}
+
 .container {
+    text-align: center;
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 70px;
+}
+
+p {
+    color: gray;
+}
+
+.containerCard {
     width: 900px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+    margin-top: 50px;
+    
 }
 
 .card {
-    width: calc(100% / 3);
+    width: calc(100% / 3 - 20px);
+    margin: 10px;
+    background-color: white;
+    text-align: center;
+}
+
+.imgWidth {
+    width: 100%;
+}
+
+.nameSurname {
+    background: white;
+    padding: 10px;
+    font-size: large;
+    font-weight: 700;
+}
+
+.job {
+    background: white;
+    padding: 10px;
 }
